@@ -2,6 +2,7 @@ import { Post } from "../adapters/take-home/requests.js";
 import { ADD_PROPERTY } from "../adapters/take-home/urls.js";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { Styles } from "../styles/properties.css";
 
 export const AddPropertyForm = () => {
     const [address, setAddress] = useState();
@@ -24,7 +25,7 @@ export const AddPropertyForm = () => {
             <p>{response}</p>
             <input type="text" name="address" placeholder="Address" onChange={event => {setAddress(event.target.value)}}></input>
             <input type="number" name="valuation" placeholder="valuation" onChange={event => {setValuation(event.target.value)}}></input>
-            <input type="submit" value="Submit" onClick={() => {submitForm()}}></input>
+            <button value="Submit" onClick={() => {submitForm()}}>Add</button>
         </div>
     )
 }

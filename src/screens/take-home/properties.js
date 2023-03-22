@@ -3,6 +3,7 @@ import { GET_ALL_PROPERTIES } from "../../adapters/take-home/urls.js";
 import { PropertyContainer } from "../../components/containers.js";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import { Styles } from "../../styles/properties.css";
 
 export const PropertiesScreen = () => {
     const [propertiesData, setPropertiesData] = useState([]);
