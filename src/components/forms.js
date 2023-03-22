@@ -22,10 +22,11 @@ export const AddPropertyForm = () => {
 
     return (
         <div className="add-property-form">
+            <button onClick={() => {navigate("/")}}>Go back</button>
             <p>{response}</p>
             <input type="text" name="address" placeholder="Address" onChange={event => {setAddress(event.target.value)}}></input>
             <input type="number" name="valuation" placeholder="valuation" onChange={event => {setValuation(event.target.value)}}></input>
-            <button value="Submit" onClick={() => {submitForm()}}>Add</button>
+            <button onClick={() => {submitForm()}}>Add</button>
         </div>
     )
 }
